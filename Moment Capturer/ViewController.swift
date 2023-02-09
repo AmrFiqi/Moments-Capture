@@ -7,14 +7,15 @@
 
 import UIKit
 
-class ViewController: UITableViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate{
+class ViewController: UITableViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     var moments = [Moment]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
-        
+
         
     }
     
@@ -26,17 +27,17 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? PersonCell else{
             fatalError("Fatal error")
         }
-        let thisMoment = moments[indexPath.item]
+        let thisMoment = moments[indexPath.row]
         cell.captioned.text = thisMoment.name
+        print(thisMoment.name)
         
-        let path = getDocumentsDirectory().appendingPathExtension(thisMoment.image)
+        let path = getDocumentsDirectory().appendingPathComponent(thisMoment.image)
         cell.imageViewer.image = UIImage(contentsOfFile: path.path)
-        
+        print(thisMoment.image)
+        print(path)
         return cell
         
     }
-
-    
     
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -44,11 +45,13 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         guard let image = info[.editedImage] as? UIImage else{return}
+        selectedImage = image
         let imageName = UUID().uuidString
         print (imageName)
         print("hello")
-        let imagePath = getDocumentsDirectory().appendingPathExtension(imageName)
+        let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
         
         if let jpegData = image.jpegData(compressionQuality: 1){
             try? jpegData.write(to: imagePath)
@@ -64,6 +67,7 @@ class ViewController: UITableViewController, UIImagePickerControllerDelegate & U
     @objc func addNewPerson(){
         let picker = UIImagePickerController()
         picker.sourceType = .camera
+ 
         picker.allowsEditing = true
         picker.delegate = self
         present(picker, animated: true)
