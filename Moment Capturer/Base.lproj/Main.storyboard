@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Images Table View Controller-->
         <scene sceneID="fqI-p9-Yl7">
             <objects>
-                <tableViewController id="bIy-gp-Sct" customClass="ViewController" customModule="Moment_Capturer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bIy-gp-Sct" customClass="ImagesTableViewController" customModule="Moment_Capturer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="dd1-Zi-jai">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="2LI-Sf-dSu" customClass="PersonCell" customModule="Moment_Capturer" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="2LI-Sf-dSu" customClass="MomentCell" customModule="Moment_Capturer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2LI-Sf-dSu" id="52R-H4-nqn">
@@ -37,7 +37,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="captioned" destination="H6z-dm-Rkt" id="lbD-3Z-4vb"/>
+                                    <outlet property="captionLabel" destination="H6z-dm-Rkt" id="lbD-3Z-4vb"/>
                                     <outlet property="imageViewer" destination="LeT-ar-Xw8" id="fYb-eY-gj3"/>
                                 </connections>
                             </tableViewCell>
