@@ -15,6 +15,7 @@
 		E5058B9D2993E96900C7AB50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5058B9B2993E96900C7AB50 /* LaunchScreen.storyboard */; };
 		E5058BA72993F19200C7AB50 /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5058BA62993F19200C7AB50 /* Moment.swift */; };
 		E5058BAB2993F63900C7AB50 /* MomentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5058BAA2993F63900C7AB50 /* MomentCell.swift */; };
+		E5058BAF2995AA0900C7AB50 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5058BAE2995AA0900C7AB50 /* ImageDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E5058B9E2993E96900C7AB50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5058BA62993F19200C7AB50 /* Moment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
 		E5058BAA2993F63900C7AB50 /* MomentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentCell.swift; sourceTree = "<group>"; };
+		E5058BAE2995AA0900C7AB50 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E5058B902993E96800C7AB50 /* AppDelegate.swift */,
 				E5058B922993E96800C7AB50 /* SceneDelegate.swift */,
 				E5058B942993E96800C7AB50 /* ImagesTableViewController.swift */,
+				E5058BAE2995AA0900C7AB50 /* ImageDetailViewController.swift */,
 				E5058BA62993F19200C7AB50 /* Moment.swift */,
 				E5058B962993E96800C7AB50 /* Main.storyboard */,
 				E5058BAA2993F63900C7AB50 /* MomentCell.swift */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5058B952993E96800C7AB50 /* ImagesTableViewController.swift in Sources */,
+				E5058BAF2995AA0900C7AB50 /* ImageDetailViewController.swift in Sources */,
 				E5058BAB2993F63900C7AB50 /* MomentCell.swift in Sources */,
 				E5058B912993E96800C7AB50 /* AppDelegate.swift in Sources */,
 				E5058B932993E96800C7AB50 /* SceneDelegate.swift in Sources */,
